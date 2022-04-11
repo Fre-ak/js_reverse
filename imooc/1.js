@@ -316,6 +316,8 @@ var K = function (a) {
     }(a)
 }
 Math.random = function(){return 0.1};
+
+// 参数来源于 https://www.imooc.com/passport/user/prelogin
 var a = {
     "status": 10001,
     "code": "rB5fmu",
@@ -324,4 +326,6 @@ var a = {
 }
 f = a.pubkey;
 
-console.log(K(1 + "\t" + 1 + "\t" + 1))
+password = btoa(K('I9GgPc\t1649657580\t33333213'))
+
+//browser_key 浏览器指纹的hash  应该是用来追踪的  没啥用
